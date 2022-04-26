@@ -10,6 +10,11 @@
       format("woff"),
     url("https://mateusqc.github.io/wedding/fonts/cinzel/cinzel-regular-webfont.svg")
       format("svg");
+  src: url("http://mateusfernanda.me/fonts/cinzel/cinzel-regular-webfont.eot");
+  src: url("http://mateusfernanda.me/fonts/cinzel/cinzel-regular-webfont.woff")
+      format("woff"),
+    url("http://mateusfernanda.me/fonts/cinzel/cinzel-regular-webfont.svg")
+      format("svg");
 }
 
 @font-face {
@@ -23,6 +28,8 @@
   font-family: "Fournier";
   src: url("/fonts/fournier/FournierMTStdItalic.woff") format("woff");
   src: url("https://mateusqc.github.io/wedding/fonts/fournier/FournierMTStdItalic.woff")
+    format("woff");
+  src: url("http://mateusfernanda.me/fonts/fournier/FournierMTStdItalic.woff")
     format("woff");
 }
 
