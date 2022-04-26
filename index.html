@@ -50,7 +50,7 @@
                         <ul class="primary-nav">
                             <li><a class="force-white-text" href="#cerimonia">Cerimônia</a></li>
                             <li><a class="force-white-text" href="#recepcao">Recepção</a></li>
-                            <li><a class="force-white-text" href="#lista">Lista de Presentes</a></li>
+                            <li><a class="force-white-text" href="#lista-presentes">Lista de Presentes</a></li>
                             <li><a class="force-white-text" href="#rsvp">Confirme Presença</a></li>
                             <!-- <li class="hidden-sm hidden-xs"><a style="color: #fff !important;" href="#video-bg">Glimpse of the city</a></li> -->
                         </ul>
@@ -270,7 +270,10 @@
             <div class="col-md-12 text-center" style="margin-top: 40px;">
                 <h5>Chave PIX - Número de Celular</h5>
                 <div style="margin-bottom: 10px;">83996233260</div>
-                <span onclick="copyPixToClip();"><a onclick="copyPixToClip();" class="btn-fill btn-small force-white-text"><img height="23px" src="img/icons/pix-branco.png" style="fill: #fff; margin-bottom: 3px; margin-right: 10px;">Copiar Chave</a></span>
+                <a class="copy-pix-btn btn-fill btn-small force-white-text"><img height="23px" src="img/icons/pix-branco.png" style="fill: #fff; margin-bottom: 3px; margin-right: 10px;">Copiar Chave</a>
+                <button onclick="handler();" class="btn-test white b pv2 ph3 bg-gray hover-bg-mid-gray bn br-pill">
+                    Copiar Chave
+                  </button>
             </div>
         </div>
     </div>
@@ -373,9 +376,9 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                     </button>
                     <div class="section-padding">
-                        <h3>Thank you!</h3>
-                        <p>We are glad to see you join us on our big day.</p>
-                        <div id="add-to-cal"></div>
+                        <h3>Confirmado com sucesso!</h3>
+                        <p>Estaremos muito felizes com sua presença nesse dia tão especial!</p>
+                        <!-- <div id="add-to-cal"></div> -->
                     </div>
                 </div>
             </div><!-- /.modal-content -->
@@ -386,7 +389,7 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <h3>Confirme sua presença</h3>
-                <p>Confirme sua presença até **/**/** para receber o QRCode de acesso.</p>
+                <p>Confirme sua presença para receber o QRCode de acesso.</p>
                 <form id="rsvp-form" class="rsvp-form"
                       action=""
                       method="POST">
@@ -477,8 +480,21 @@
     ga('send', 'pageview');
 </script>
 <script>
-    function copyPixToClip () {
+    const btnList = document.getElementsByClassName('copy-pix-btn');
+
+    const handler = function () {
         navigator.clipboard.writeText(83996233260);
+        alert('Chave copiada com sucesso!');
+    }
+    if (btnList.length === 1) {
+        btnList[0].addEventListener('click', function () {
+            navigator.clipboard.writeText(83996233260);
+            alert('Chave copiada com sucesso!');
+        });
+        btnList[0].addEventListener('touchstart', function () {
+            navigator.clipboard.writeText(83996233260);
+            alert('Chave copiada com sucesso!');
+        });        
     }
 </script>
 </body>

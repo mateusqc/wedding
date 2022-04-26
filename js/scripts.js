@@ -250,7 +250,7 @@ $(document).ready(function () {
     $("#alert-wrapper").html(
       alert_markup(
         "info",
-        "<strong>Just a sec!</strong> We are saving your details."
+        "<strong>Só um segundo!</strong> Estamos verificando suas informações..."
       )
     );
 
@@ -261,12 +261,12 @@ $(document).ready(function () {
       $("#alert-wrapper").html(
         alert_markup(
           "danger",
-          "<strong>Sorry!</strong> Your invite code is incorrect."
+          "<strong>Erro!</strong> Código de convite inválido."
         )
       );
     } else {
       $.post(
-        "https://script.google.com/macros/s/AKfycbxJYqhPdAOqCpnYDNeig52qoPCLlCdSizcalQ8oi3jzZx5y3SafB-Xbbc3u1zbAIJkG5A/exec",
+        "https://script.google.com/macros/s/AKfycbwKbYgC4kn_k5TOW334BuEs3S_U2FDicwMbHRuUFZfJkoTF3R2AsH-Jic1sZhcHSKE/exec",
         data
       )
         .done(function (data) {
@@ -283,7 +283,7 @@ $(document).ready(function () {
           $("#alert-wrapper").html(
             alert_markup(
               "danger",
-              "<strong>Sorry!</strong> There is some issue with the server. "
+              "<strong>Erro!</strong> Há algum problema com o servidor."
             )
           );
         });
