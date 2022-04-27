@@ -254,10 +254,7 @@ $(document).ready(function () {
       )
     );
 
-    if (
-      MD5($("#invite_code").val()) !== "b0e53b10c1f55ede516b240036b88f40" &&
-      MD5($("#invite_code").val()) !== "2ac7f43695eb0479d5846bb38eec59cc"
-    ) {
+    if (MD5($("#invite_code").val()) !== "3466cc6066c989d5e2ca61e01f263c0e") {
       $("#alert-wrapper").html(
         alert_markup(
           "danger",
@@ -266,7 +263,7 @@ $(document).ready(function () {
       );
     } else {
       $.post(
-        "https://script.google.com/macros/s/AKfycbwKbYgC4kn_k5TOW334BuEs3S_U2FDicwMbHRuUFZfJkoTF3R2AsH-Jic1sZhcHSKE/exec",
+        "https://script.google.com/macros/s/AKfycbzJJ5OyTqwN7puh2lAuC7upL_WCGCFPp54yucxd4jZecTsdDnJNt6Z3JS4sDg1KSH3NwA/exec",
         data
       )
         .done(function (data) {
