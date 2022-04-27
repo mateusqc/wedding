@@ -481,30 +481,18 @@
 <script>
     const btnList = document.getElementsByClassName('copy-pix-btn');
 
-    const pix = document.getElementById('chave-pix');
-    pix.select();
-    pix.setSelectionRange(0, 99999);
-    
     if (btnList.length === 1) {
-            btnList[0].addEventListener('click', function () {
-            navigator.clipboard.writeText(pix.value);
+        btnList[0].addEventListener('click', function () {
+            elem = document.createElement('textarea');
+            elem.value = '83996233260';
+            document.body.appendChild(elem);
+            elem.select();
+            document.execCommand('copy');
+            document.body.removeChild(elem);
             alert('Chave copiada com sucesso!');
         });
-        // btnList[0].addEventListener('touchstart', function () {
-        //     navigator.clipboard.writeText(83996233260);
-        //     alert('Chave copiada com sucesso!');
-        // });        
     }
 
-    // $('.copy-pix-btn').click(function() {
-    //     navigator.clipboard.writeText(83996233260);
-    //     alert('Chave copiada com sucesso!');
-    // });
-
-    // $('.copy-pix-btn').mousedown(function() {
-    //     navigator.clipboard.writeText(83996233260);
-    //     alert('Chave copiada com sucesso!');
-    // });
 </script>
 </body>
 </html>
